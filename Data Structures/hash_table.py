@@ -29,3 +29,5 @@ if "banana" in hash_table:
 #After deletion: {'apple': 15, 'banana': 20}
 #Banana exists in table
 
+# A hash table stores data as key–value pairs and uses a hash function internally to map keys to memory locations, 
+# enabling very fast lookups, insertions, and deletions on average.
