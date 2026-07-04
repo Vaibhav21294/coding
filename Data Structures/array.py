@@ -35,3 +35,8 @@ arr.remove(3)
 print("After removal:", arr)  # array('i', [1, 2, 4, 5, 6])
 
 # In interviews, Python lists are usually considered arrays because they behave like dynamic arrays (can grow/shrink).
+
+from PIL import Image
+
+img = Image.open("images/Array.png")
+img.show()
