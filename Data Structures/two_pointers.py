@@ -1,9 +1,9 @@
 """
-Absolutely. Two Pointers and Sliding Window are among the most frequently tested techniques in software engineering interviews 
-(especially at companies like Google, Meta, Amazon, and Microsoft). They aren't separate data structures—they are problem-solving patterns.
-"""
+Absolutely. Two Pointers and Sliding Window are among the most frequently tested techniques 
+in software engineering interviews 
+(especially at companies like Google, Meta, Amazon, and Microsoft). 
+They aren't separate data structures—they are problem-solving patterns.
 
-"""
 1. Two Pointers
 What is it?
 
@@ -16,9 +16,7 @@ Move in the same direction
 Move at different speeds
 
 This often reduces an O(n²) solution to O(n).
-"""
 
-"""
 Example 1: Two Sum in a Sorted Array
 
 Problem
@@ -29,26 +27,22 @@ Given a sorted array:
 nums = [1, 2, 4, 7, 11, 15]
 target = 15
 
-"""Find two numbers that add up to 15.
+"""
+Find two numbers that add up to 15.
 
 # Expected
 4 + 11 = 15
-"""
 
-"""
 Brute Force
 for i in range(len(nums)):
     for j in range(i + 1, len(nums)):
         if nums[i] + nums[j] == target:
             return [nums[i], nums[j]]
-"""
 
-"""
+
 Time Complexity:
 O(n²)
-"""
 
-"""
 Two Pointer Solution
 
 Start
