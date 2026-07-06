@@ -51,4 +51,48 @@ Given the topics we've already covered together (Trees, Graphs, DP, Backtracking
 this list is a strong next step. 
 By solving these 20 problems and understanding the underlying patterns
 —not just memorizing solutions—you'll cover a large portion of what is commonly tested in Software Engineer coding interviews.
+
+Ultra-Short Mandatory List (12 Problems Total)
+
+1. Linked List (4 problems)
+
+These cover ~90% of linked list interview questions.
+
+Reverse Linked List ⭐
+Merge Two Sorted Lists
+Linked List Cycle
+Remove Nth Node From End of List
+
+👉 Covers: pointers, fast/slow, reversal, edge cases
+
+2. Stack (3 problems)
+Valid Parentheses ⭐
+Min Stack
+Daily Temperatures ⭐ (monotonic stack)
+
+👉 Covers: stack basics + real interview pattern
+
+3. Queue / Deque (2 problems)
+Binary Tree Level Order Traversal (BFS queue usage)
+Sliding Window Maximum ⭐ (deque pattern)
+
+👉 Covers: BFS + sliding window optimization
+
+4. Recursion / Backtracking (3 problems)
+Subsets ⭐
+Permutations
+Generate Parentheses
+
+👉 Covers: recursion tree + backtracking pattern
+
+My suggested order for the next topics
+Linked Lists (fundamental)
+Stack (fundamental)
+Queue & Deque (fundamental)
+Recursion (strengthens problem-solving)
+Trie
+Union Find
+Monotonic Stack
+LRU Cache (great capstone problem combining multiple data structures)
 """
+
