@@ -1,5 +1,8 @@
 """
 
+Pointers: 
+Dry run before writing code
+
 Absolutely. Here's the Top 20 again, this time grouped by the DSA topic/pattern they teach. 
 This is the order I'd recommend practicing them.
 
