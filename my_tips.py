@@ -16,4 +16,6 @@ The number of unique pairs in a collection of n items is:
 n(n - 1) / 2
 
 and that simplifies to O(n²).
+
+3. Always do brute force first. Atleast I have one solution by now
 """
