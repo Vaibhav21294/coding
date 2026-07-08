@@ -77,7 +77,7 @@ Too slow.
 
 Brute Force
 """
-
+"""
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         result = []
@@ -98,7 +98,7 @@ class Solution:
                     group.append(strs[j])
             result.append(group)  
         return result     
-
+"""
 """
 Total Time
 O(N²) × O(K log K)
@@ -154,4 +154,86 @@ When analyzing output space, ask yourself:
 
 Stored once → O(N)
 Duplicated many times → could become O(N²) or more
+
+Optimized Idea
+
+Instead of comparing every pair:
+
+Ask:
+
+Can we generate the same "key" for every anagram?
+
+Algorithm
+
+For every word:
+
+Sort the letters.
+Use the sorted string as the key.
+Store the original word in the list for that key.
+
+Python Solution
+"""
+from collections import defaultdict
+
+def group_anagrams(strs):
+
+    groups = defaultdict(list)
+
+    for word in strs:
+
+        key = "".join(sorted(word))
+
+        groups[key].append(word)
+
+    return list(groups.values())
+
+"""
+defaultdict(list) automatically creates an empty list the first time a new key is used.
+
+Without defaultdict, you'd write:
+
+groups = {}
+
+for word in strs:
+
+    key = "".join(sorted(word))
+
+    if key not in groups:
+        groups[key] = []
+
+    groups[key].append(word)
+
+Both approaches work, but defaultdict is shorter and cleaner.
+
+Time Complexity
+
+Let:
+
+n = number of words
+k = average length of each word
+
+For each word:
+
+Sorting takes:
+
+O(k log k)
+
+Hash map insertion:
+
+O(1)
+
+Overall:
+
+O(n × k log k)
+
+Space Complexity
+
+The hash map stores every word.
+
+Total extra space:
+
+O(n × k)
+
+because all characters from all words are stored in the grouped lists.
+
 """

@@ -20,4 +20,23 @@ n(n - 1) / 2
 and that simplifies to O(n²).
 
 4. visited = [False] * len(strs)
+
+5. 
+word = "cba"
+sorted_word = sorted(word)
+print(sorted_word) # ['a', 'b', 'c']
+ans = "".join(sorted_word)
+print(ans) # abc
+
+6. 
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        from collections import defaultdict
+
+        groups = defaultdict(list)
+
+        for str in strs:
+            key = "".join(sorted(str))
+            groups[key].append(str)
+        return list(groups.values())
 """
