@@ -40,8 +40,9 @@ class Solution:
             groups[key].append(str)
         return list(groups.values())
 
-7. Problem solving:
+7. Process:
 Brute Force
+Dry run
 Optimal solution
 Time complexity
 Space complexity
@@ -79,5 +80,37 @@ popped_item = my_set.pop()
 
 # Clear all items
 my_set.clear() # set()
+
+9. str = "abc"
+
+for i in range(len(str)):
+    for j in range(i+1, len(str)+1):
+        print(str[i:j])
+
+a
+ab
+abc
+b
+bc
+c
+
+10. break vs continue
+for num in [1, 2, 3, 4, 5]:
+    if num == 3:
+        break
+    print(num)
+
+1
+2
+
+for num in [1, 2, 3, 4, 5]:
+    if num == 3:
+        continue
+    print(num)
+
+1
+2
+4
+5
 
 """
