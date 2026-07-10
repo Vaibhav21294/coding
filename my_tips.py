@@ -113,4 +113,6 @@ for num in [1, 2, 3, 4, 5]:
 4
 5
 
+11. array.sort() # in place
+sorted.array()
 """
