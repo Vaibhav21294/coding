@@ -149,8 +149,8 @@ class Solution:
 
         return -1
     
-    """
-    Why does this work?
+"""
+Why does this work?
 
 At every step:
 
