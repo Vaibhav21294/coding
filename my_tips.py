@@ -115,4 +115,6 @@ for num in [1, 2, 3, 4, 5]:
 
 11. array.sort() # in place
 sorted.array()
+
+12. for start, end in intervals[1:]
 """
