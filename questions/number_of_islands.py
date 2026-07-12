@@ -326,4 +326,314 @@ Pacific Atlantic Water Flow
 
 Once you're comfortable with this traversal pattern, many grid-based graph problems become much easier.
 
+Absolutely! A smaller grid is much easier to understand.
+
+Let's use this 3 × 2 grid (3 rows, 2 columns):
+
+[
+ ["1", "1"],
+ ["0", "1"],
+ ["1", "0"]
+]
+
+Coordinates:
+
+      c0 c1
+
+r0     1  1
+r1     0  1
+r2     1  0
+
+There are 2 islands here:
+
+Island 1:
+
+1 1
+  1
+
+Island 2:
+
+1
+Initial State
+islands = 0
+
+Grid:
+
+      c0 c1
+
+r0     1  1
+r1     0  1
+r2     1  0
+Step 1: Start scanning
+
+The outer loops start at:
+
+(r0, c0)
+
+Cell value:
+
+1
+
+It's land!
+
+So:
+
+islands = 1
+
+Now call:
+
+dfs(0, 0)
+DFS at (0,0)
+
+Current position:
+
+ X 1
+ 0 1
+ 1 0
+
+Mark it visited:
+
+ # 1
+ 0 1
+ 1 0
+
+Now DFS explores 4 directions.
+
+Down
+
+Go to:
+
+(1,0)
+
+Grid:
+
+ # 1
+ X 1
+ 1 0
+
+Value:
+
+0
+
+Water.
+
+Return immediately.
+
+Up
+
+Go to:
+
+(-1,0)
+
+Outside the grid.
+
+Return.
+
+Right
+
+Go to:
+
+(0,1)
+
+Grid:
+
+ # X
+ 0 1
+ 1 0
+
+Land!
+
+Mark visited.
+
+ # #
+ 0 1
+ 1 0
+
+Now DFS continues from (0,1).
+
+Down
+
+Go to:
+
+(1,1)
+
+Grid:
+
+ # #
+ 0 X
+ 1 0
+
+Land!
+
+Mark visited.
+
+ # #
+ 0 #
+ 1 0
+
+Explore its neighbors:
+
+Down → (2,1) = 0 ❌
+Up → (0,1) = # ❌
+Left → (1,0) = 0 ❌
+Right → Outside ❌
+
+Nothing more to visit.
+
+Return.
+
+Back to (0,1)
+
+Continue remaining directions:
+
+Up → Outside ❌
+Right → Outside ❌
+Left → Already visited (#) ❌
+
+Return.
+
+Back to (0,0)
+
+Continue remaining direction:
+
+Left:
+
+Outside.
+
+Return.
+
+DFS is complete.
+
+Grid after first DFS
+ # #
+ 0 #
+ 1 0
+
+Notice:
+
+The entire first island has been marked.
+
+Continue scanning
+
+Outer loops continue.
+
+(0,1)
+
+Already visited (#).
+
+Skip.
+
+(1,0)
+
+Water.
+
+Skip.
+
+(1,1)
+
+Visited.
+
+Skip.
+
+(2,0)
+
+Cell value:
+
+1
+
+Aha!
+
+This is an unvisited land cell.
+
+So:
+
+islands = 2
+
+Call:
+
+dfs(2,0)
+DFS at (2,0)
+
+Current grid:
+
+ # #
+ 0 #
+ X 0
+
+Mark visited.
+
+ # #
+ 0 #
+ # 0
+
+Check neighbors:
+
+Down → Outside ❌
+Up → Water ❌
+Left → Outside ❌
+Right → Water ❌
+
+Done.
+
+Continue scanning
+
+Last cell:
+
+(2,1)
+
+Water.
+
+Skip.
+
+Outer loops finish.
+
+Final Answer
+islands = 2
+What are the outer loops doing?
+
+The outer loops simply ask:
+
+"Have I found a NEW island?"
+
+They scan every cell:
+
+(0,0) ✔ New island
+
+(0,1) Already visited
+
+(1,0) Water
+
+(1,1) Already visited
+
+(2,0) ✔ New island
+
+(2,1) Water
+What is DFS doing?
+
+DFS's only job is:
+
+"Starting from one land cell, visit every land cell connected to it."
+
+So when we start at (0,0), DFS automatically visits:
+
+(0,0)
+(0,1)
+(1,1)
+
+They all belong to the same island.
+
+Later, when the outer loops reach (0,1) or (1,1), they're already marked as visited, so we don't count them again.
+
+The two-part algorithm to remember
+Outer loops:
+    Find a new island.
+
+DFS:
+    Mark the entire island as visited.
+
+Repeat until every cell has been scanned.
+
+This separation of responsibilities is the key idea behind Number of Islands. 
+Once you see it this way, the algorithm becomes much easier to reason about.
+
 """
