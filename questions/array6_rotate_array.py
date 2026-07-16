@@ -98,4 +98,45 @@ class Solution:
 Complexity
 Time: O(n)
 Space: O(n)
+
+Idea
+
+Instead of moving elements individually:
+
+Original
+
+1 2 3 4 5 6 7
+
+Rotate by 3.
+
+Step 1: Reverse the whole array
+7 6 5 4 3 2 1
+Step 2: Reverse first k elements
+5 6 7 4 3 2 1
+Step 3: Reverse remaining elements
+5 6 7 1 2 3 4
+
+Done!
 """
+
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        n = len(nums)
+        k %= n
+
+        def reverse(left, right):
+            while left < right:
+                nums[left], nums[right] = nums[right], nums[left]
+                left += 1
+                right -= 1
+
+        reverse(0, n - 1)
+        reverse(0, k - 1)
+        reverse(k, n - 1)
+
+"""
+Complexity
+Time: O(n)
+Space: O(1)
+"""
+
