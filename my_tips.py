@@ -117,4 +117,16 @@ for num in [1, 2, 3, 4, 5]:
 sorted.array()
 
 12. for start, end in intervals[1:]
+
+13.
+pairs = list(hashmap.items())
+
+sorted_pairs = sorted(pairs, key=lambda x:x[1], reverse=True)
+
+14. # Getting last digit for a num
+while n > 0:
+    digit = n % 10
+    total += digit * digit
+    n = n // 10
 """
+

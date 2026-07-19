@@ -1,4 +1,8 @@
-# coding
-Interview preparation
+# approach to every question
+Brute force
+Dry run
+Time and space complexity
 
-Next: Array -> Maximum Subarray
+Optimal solution
+Dry run
+Time and space complexity
