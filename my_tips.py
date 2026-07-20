@@ -128,5 +128,10 @@ while n > 0:
     digit = n % 10
     total += digit * digit
     n = n // 10
+
+15: Iterate over string elements
+s = "Vaibhav"
+for i in range(len(s)):
+    print(s[i])
 """
 
