@@ -133,5 +133,10 @@ while n > 0:
 s = "Vaibhav"
 for i in range(len(s)):
     print(s[i])
+
+16.
+.isalnum()
+
+.lower()
 """
 
