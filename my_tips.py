@@ -138,5 +138,10 @@ for i in range(len(s)):
 .isalnum()
 
 .lower()
+
+17. stack
+LIFO
+stack.eppend()
+stack.pop()
 """
 
