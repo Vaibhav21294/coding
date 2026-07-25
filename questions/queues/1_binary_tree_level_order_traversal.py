@@ -1,3 +1,0 @@
-"""
-Already present in trees
-"""
