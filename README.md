@@ -1,4 +1,6 @@
-# approach to every question
+Next - Greedy: Jump Game 
+
+# Approach to every question
 Brute force
 Dry run
 Time and space complexity
