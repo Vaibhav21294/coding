@@ -1,4 +1,4 @@
-Next - Greedy: Jump Game 
+Next - Dynamic programming: Climbing staircase 
 
 # Approach to every question
 Brute force
