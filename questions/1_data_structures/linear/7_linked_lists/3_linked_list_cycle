@@ -1,0 +1,97 @@
+"""
+Linked List Cycle (LeetCode 141)
+
+Problem Statement
+
+Given the head of a linked list, determine if the linked list has a cycle in it.
+
+A cycle exists if some node in the list can be reached again by continuously following the next pointer.
+
+Return:
+
+True if there is a cycle.
+False otherwise.
+
+Example 1
+Input:
+
+3 → 2 → 0 → -4
+    ↑         |
+    |_________|
+
+Output:
+True
+
+Explanation:
+
+The last node points back to the node with value 2, creating a cycle.
+
+Example 2
+Input:
+
+1 → 2
+↑   |
+|___|
+
+Output:
+True
+
+Explanation:
+
+The second node points back to the first node.
+
+Example 3
+Input:
+
+1 → 2 → 3 → None
+
+Output:
+False
+
+Explanation:
+
+The linked list ends with None, so there is no cycle.
+
+Optimal Solution
+
+This is the famous Fast & Slow Pointer algorithm (also called Floyd's Cycle Detection).
+
+Idea
+
+Use two pointers.
+
+Slow moves 1 step
+Fast moves 2 steps
+
+If there is a cycle, the fast pointer will eventually catch the slow pointer.
+
+"""
+
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+
+        slow = head
+        fast = head
+
+        while fast and fast.next:
+
+            slow = slow.next
+            fast = fast.next.next
+
+            if slow == fast:
+                return True
+
+        return False
+
+"""
+Complexity
+
+Time: O(n)
+
+Each pointer traverses at most the length of the list.
+
+Space: O(1)
+
+Only two pointers are used.
+"""
+
