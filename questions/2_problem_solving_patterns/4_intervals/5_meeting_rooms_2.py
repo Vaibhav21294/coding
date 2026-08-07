@@ -104,4 +104,86 @@ Put the first meeting's end time into the heap.
 
 Heap:
 30
+
+Step 3
+
+For every remaining meeting:
+
+If
+
+start >= heap[0]
+
+remove the earliest ending meeting.
+
+heapq.heappop(heap)
+
+Then add the current meeting's end time.
+
+heapq.heappush(heap, end)
+
+The heap size tells us how many rooms are currently in use.
+
+The maximum heap size (or simply the final heap size with this algorithm) is the answer.
+"""
+
+import heapq
+
+class Solution:
+    def minMeetingRooms(self, intervals):
+
+        if not intervals:
+            return 0
+
+        intervals.sort()
+
+        heap = []
+
+        heapq.heappush(heap, intervals[0][1])
+
+        for start, end in intervals[1:]:
+
+            if start >= heap[0]:
+                heapq.heappop(heap)
+
+            heapq.heappush(heap, end)
+
+        return len(heap)
+
+"""
+Complexity
+
+Sorting:
+
+O(n log n)
+
+Each meeting:
+
+Push → O(log n)
+Pop → O(log n)
+
+Overall:
+
+Time: O(n log n)
+Space: O(n)
+
+Interview Tip
+
+This is a classic Intervals + Heap problem.
+
+Whenever you see:
+
+Meeting rooms
+Conference rooms
+Schedules
+Resources that become available over time
+
+think:
+
+Sort by start time + Min Heap of end times
+
+The heap always answers one important question efficiently:
+
+"Which meeting finishes first?"
+
+That's exactly the information you need to decide whether you can reuse a room or need a new one.
 """
