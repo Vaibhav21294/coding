@@ -143,5 +143,24 @@ for i in range(len(s)):
 LIFO
 stack.eppend()
 stack.pop()
+
+18.
+result.extend(...)
+
+extend() adds each item from another list into the current list.
+
+Example:
+
+result = [[1,5]]
+
+result.extend([[10,12], [15,18]])
+
+Now:
+
+result
+
+is:
+
+[[1,5], [10,12], [15,18]]
 """
 
