@@ -26,3 +26,51 @@ Input: intervals = [[1,2],[2,3]]
 Output: 0
 Explanation: You don't need to remove any of the intervals since they're already non-overlapping.
 """
+
+intervals.sort(key=lambda x: x[1])
+
+count = 0
+previous_end = intervals[0][1]
+
+for i in range(1, len(intervals)):
+    current_start = intervals[i][0]
+    
+    if current_start < previous_end:
+        count += 1
+    else:
+        previous_end = intervals[i][1]
+
+return count
+
+"""
+Complexity
+
+1. Time Complexity ✅
+
+You have:
+
+intervals.sort(...)
+
+Sorting:
+
+O(n log n)
+
+Then:
+
+for i in range(1, len(intervals)):
+
+One traversal:
+
+O(n)
+
+Therefore:
+
+O(n log n) + O(n)
+= O(n log n)
+
+✅ Time = O(n log n)
+
+Time: O(n log n)
+Space: O(1) auxiliary space
+Pattern: Intervals + Greedy
+"""
