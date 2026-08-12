@@ -154,4 +154,19 @@ Dynamic Programming
 
 Notice that I placed Dynamic Programming last because it's the most challenging topic and 
 builds on strong recursion skills.
+
+Arrays 7/7
+Strings 2/2
+Hashsets 3/3
+Hashmaps 2/2
+Two pointers 4/4
+Sliding windows 2/4
+Binary search 5/6
+Trees and binary trees 7/9
+Graphs 2/7
+Heap / Priority queue 0/5
+Dynamic Programming 1/9
+Backtracking 0/6
+Intervals 5/5
+Greedy 1/4
 """
