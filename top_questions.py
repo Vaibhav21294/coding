@@ -164,7 +164,7 @@ Sliding windows 2/4
 Binary search 5/6
 Trees and binary trees 7/9
 Graphs 2/7
-Heap / Priority queue 0/5
+Heap / Priority queue 1/5
 Dynamic Programming 1/9
 Backtracking 0/6
 Intervals 5/5
