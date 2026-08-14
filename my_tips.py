@@ -167,4 +167,42 @@ is:
 intervals = [[1,2],[2,3],[3,4],[1,3]]
 
 intervals.sort(key=lambda x:x[1])
+
+20. 
+Tuple: (frequency, num) stores two related values together as one object. 
+Python compares tuples from left to right, so (frequency, num) is primarily ordered by frequency.
+
+21.
+Python compares tuples from left to right.
+
+So:
+
+(1,3)
+(2,2)
+(3,1)
+
+Python primarily looks at the first number.
+
+(1,3)  → first value = 1
+(2,2)  → first value = 2
+(3,1)  → first value = 3
+
+Therefore:
+
+(1,3)
+
+is the smallest tuple.
+
+So:
+
+heapq.heappop(heap)
+
+removes:
+
+(1,3)
+
+because 1 is the smallest frequency.
+
+22.
+for num, frequency in hashmap.items():
 """

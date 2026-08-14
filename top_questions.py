@@ -170,5 +170,5 @@ Backtracking 0/6
 Intervals 5/5
 Greedy 1/4
 
-Total = 41
+Total = 43
 """
