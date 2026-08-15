@@ -137,6 +137,11 @@ These appear in almost every interview loop.
 | Gas Station               | Medium     |
 | Task Scheduler            | Medium     |
 
+├── 1_recursions
+│   ├── 1_fibonacci_number.py
+│   ├── 2_reverse_linked_list.py
+│   └── 3_pow_x_n.py
+
 Suggested Learning Order
 
 Since you've already studied the underlying concepts, I'd recommend this progression:
