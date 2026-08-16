@@ -137,10 +137,9 @@ These appear in almost every interview loop.
 | Gas Station               | Medium     |
 | Task Scheduler            | Medium     |
 
-├── 1_recursions
-│   ├── 1_fibonacci_number.py
-│   ├── 2_reverse_linked_list.py
-│   └── 3_pow_x_n.py
+Recursions
+│ fibonacci_number.py
+│ pow_x_n.py
 
 Suggested Learning Order
 
@@ -169,11 +168,12 @@ Sliding windows 2/4
 Binary search 5/6
 Trees and binary trees 7/9
 Graphs 2/7
-Heap / Priority queue 1/5
+Heap / Priority queue 2/5
 Dynamic Programming 1/9
-Backtracking 0/6
+Recursion 2/2
+Backtracking 1/6
 Intervals 5/5
 Greedy 1/4
 
-Total = 43
+Total = 46
 """
