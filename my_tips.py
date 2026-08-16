@@ -205,4 +205,18 @@ because 1 is the smallest frequency.
 
 22.
 for num, frequency in hashmap.items():
+
+23. 
+n // 2
+
+means integer division.
+
+For example:
+
+8 // 2 = 4
+5 // 2 = 2
+
+24. 
+Check if number is even:    
+if n % 2 == 0:
 """
