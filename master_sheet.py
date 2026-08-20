@@ -19,6 +19,19 @@ Points
 | **Length**       | `len(nums)`      | `len(s)`      | `len(s)`      | `len(d)`                |
 '''
 
+'''
+Queue vs Stack — Python Cheat Sheet
+| Operation       | Queue (`deque`) | Stack (`list`)    |
+| --------------- | --------------- | ----------------- |
+| **Create**      | `q = deque()`   | `stack = []`      |
+| **Add**         | `q.append(x)`   | `stack.append(x)` |
+| **Remove**      | `q.popleft()`   | `stack.pop()`     |
+| **Access next** | `q[0]`          | `stack[-1]`       |
+| **Iterate**     | `for x in q:`   | `for x in stack:` |
+| **Check empty** | `if not q:`     | `if not stack:`   |
+| **Length**      | `len(q)`        | `len(stack)`      |
+'''
+
 # 1. Arrays
 
 nums = [1, 2, 3, 4, 5]
@@ -184,5 +197,53 @@ d.keys()                      # all keys
 d.values()                    # all values
 d.items()                     # key-value pairs
 
+######################################################################################
+
+# 5. Queue
+
+# Queue
+
+# FIFO → First In, First Out
+
+from collections import deque
 
 
+q = deque()
+
+
+q.append(1)
+q.append(2)
+q.append(3)
+
+
+q.popleft()    # 1
+
+'''
+1 → 2 → 3
+↑
+removed first
+'''
+
+######################################################################################
+
+# 6. Stack
+
+# Stack
+
+# LIFO → Last In, First Out
+
+stack = []
+
+
+stack.append(1)
+stack.append(2)
+stack.append(3)
+
+
+stack.pop()    # 3
+
+'''
+1 → 2 → 3
+        ↑
+    removed first
+'''
