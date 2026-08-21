@@ -3,11 +3,12 @@ Points
 
 1. Create
 2. Add, Remove
-3. Iterate
+3. Iterate, Access
 
 '''
 
 '''
+Arrays, Strings, Hashsets, Hashmaps
 | Operation        | Array / List     | String        | HashSet       | HashMap                 |
 | ---------------- | ---------------- | ------------- | ------------- | ----------------------- |
 | **Create**       | `nums = []`      | `s = ""`      | `s = set()`   | `d = {}`                |
@@ -20,7 +21,8 @@ Points
 '''
 
 '''
-Queue vs Stack — Python Cheat Sheet
+Queue vs Stack
+Queue vs Stack
 | Operation       | Queue (`deque`) | Stack (`list`)    |
 | --------------- | --------------- | ----------------- |
 | **Create**      | `q = deque()`   | `stack = []`      |
@@ -30,6 +32,35 @@ Queue vs Stack — Python Cheat Sheet
 | **Iterate**     | `for x in q:`   | `for x in stack:` |
 | **Check empty** | `if not q:`     | `if not stack:`   |
 | **Length**      | `len(q)`        | `len(stack)`      |
+'''
+
+'''
+Linkedlist
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+| Operation        | Linked List                    |
+| ---------------- | ------------------------------ |
+| **Create node**  | `node = ListNode(5)`           |
+| **Access value** | `node.val`                     |
+| **Access next**  | `node.next`                    |
+| **Add node**     | `node.next = new_node`         |
+| **Remove node**  | `node.next = node.next.next`   |
+| **Iterate**      | `while node: node = node.next` |
+| **Check empty**  | `if not head:`                 |
+
+# Most important traversal pattern
+current = head
+
+while current:
+    print(current.val)
+    current = current.next
+
+node.val          # get value
+node.next         # get next node
+node = node.next  # move forward
 '''
 
 # 1. Arrays
@@ -247,3 +278,94 @@ stack.pop()    # 3
         ↑
     removed first
 '''
+
+######################################################################################
+
+# Linked List — Python Cheat Sheet
+
+'''
+Unlike Stack, Python doesn't have a built-in linked list. 
+In LeetCode, you usually use the provided ListNode.
+'''
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+"""
+| Operation            | Linked List                  |
+| -------------------- | ---------------------------- |
+| **Create node**      | `node = ListNode(5)`         |
+| **Create link**      | `node.next = other`          |
+| **Access value**     | `node.val`                   |
+| **Access next**      | `node.next`                  |
+| **Add after node**   | `node.next = new_node`       |
+| **Remove next node** | `node.next = node.next.next` |
+| **Iterate**          | `while node:`                |
+| **Check empty**      | `if not head:`               |
+
+Most important traversal pattern
+current = head
+
+
+while current:
+    print(current.val)
+    current = current.next
+
+Add a node
+
+Suppose:
+
+1 → 2 → 3
+
+Want to add 5 after 2:
+
+new_node = ListNode(5)
+
+
+new_node.next = node2.next
+node2.next = new_node
+
+Result:
+
+1 → 2 → 5 → 3
+
+Remove a node
+
+To remove 2:
+
+node1.next = node1.next.next
+
+Result:
+
+1 → 3
+
+Memorize
+Linked List
+
+
+node.val       → value
+node.next      → next node
+
+
+current = head
+
+
+while current:
+    ...
+    current = current.next
+
+The biggest difference from an array:
+
+Array       → nums[i]       → direct access
+Linked List → node.next     → follow links
+
+So accessing the i-th node in a linked list takes O(n), whereas array indexing is O(1).
+
+The 3 things to memorize
+node.val          # get value
+node.next         # get next node
+node = node.next  # move forward
+"""
+
