@@ -64,6 +64,26 @@ node = node.next  # move forward
 '''
 
 """
+A binary tree is a data structure where each node can have at most 2 children:
+
+a left child
+a right child
+
+For example:
+
+        1
+       / \
+      2   3
+     / \
+    4   5
+
+Here:
+
+1 is the root
+2 and 3 are children of 1
+4 and 5 are children of 2
+3, 4, and 5 have no children → they are leaf nodes
+
 Binary Tree — Cheat Sheet
 In LeetCode, you usually get a TreeNode:
 class TreeNode:
