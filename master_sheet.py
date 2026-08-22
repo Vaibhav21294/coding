@@ -63,6 +63,49 @@ node.next         # get next node
 node = node.next  # move forward
 '''
 
+"""
+Binary Tree — Cheat Sheet
+In LeetCode, you usually get a TreeNode:
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+| Operation              | Binary Tree             |
+| ---------------------- | ----------------------- |
+| **Create node**        | `node = TreeNode(5)`    |
+| **Access value**       | `node.val`              |
+| **Access left**        | `node.left`             |
+| **Access right**       | `node.right`            |
+| **Add left child**     | `node.left = new_node`  |
+| **Add right child**    | `node.right = new_node` |
+| **Remove left child**  | `node.left = None`      |
+| **Remove right child** | `node.right = None`     |
+| **Check empty**        | `if not root:`          |
+| **Iterate / Traverse** | DFS / BFS               |
+
+Remember
+node.val       → value
+node.left      → left child
+node.right     → right child
+
+
+DFS → recursion / stack
+BFS → queue
+
+The main thing to understand:
+
+Linked List:
+node → next
+
+
+Binary Tree:
+       node
+      /    \
+   left   rights
+"""
+
 ######################################################################################
 
 # 1. Arrays
@@ -371,3 +414,29 @@ node.next         # get next node
 node = node.next  # move forward
 """
 
+######################################################################################
+
+# Binary Tree — Cheat Sheet
+# In LeetCode, you usually get a TreeNode:
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+"""
+Binary Tree — Complete Cheat Sheet
+| Operation              | Binary Tree             |
+| ---------------------- | ----------------------- |
+| **Create node**        | `node = TreeNode(5)`    |
+| **Access value**       | `node.val`              |
+| **Access left**        | `node.left`             |
+| **Access right**       | `node.right`            |
+| **Add left child**     | `node.left = new_node`  |
+| **Add right child**    | `node.right = new_node` |
+| **Remove left child**  | `node.left = None`      |
+| **Remove right child** | `node.right = None`     |
+| **Check empty**        | `if not root:`          |
+| **Iterate / Traverse** | DFS / BFS               |
+"""
