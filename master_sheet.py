@@ -126,6 +126,59 @@ Binary Tree:
    left   rights
 """
 
+"""
+DFS
+        1
+       / \
+      2   3
+     / \   \
+    4   5   6
+
+1. DFS
+
+The code I gave was:
+def dfs(node):
+    if not node:
+        return
+
+    dfs(node.left)
+    dfs(node.right)
+
+The important thing
+
+DFS is essentially:
+
+1. Go into the node
+2. Explore left
+3. Explore right
+
+For our tree, it visits:
+
+1 → 2 → 4 → 5 → 3 → 6
+
+DFS — Cheat Sheet
+| Item               | Remember                             |
+| ------------------ | ------------------------------------ |
+| **Meaning**        | Go **deep first**                    |
+| **Tree**           | `dfs(node.left)` → `dfs(node.right)` |
+| **Implementation** | **Recursion / Stack**                |
+| **Base case**      | `if not node: return`                |
+| **Graph**          | Use `visited` set                    |
+
+Core template
+def dfs(node):
+    if not node:
+        return
+
+    # process node
+
+    dfs(node.left)
+    dfs(node.right)
+
+Memory:
+DFS → Deep → Recursion/Stack
+"""
+
 ######################################################################################
 
 # 1. Arrays
@@ -459,4 +512,35 @@ Binary Tree — Complete Cheat Sheet
 | **Remove right child** | `node.right = None`     |
 | **Check empty**        | `if not root:`          |
 | **Iterate / Traverse** | DFS / BFS               |
+"""
+
+"""
+DFS
+        1
+       / \
+      2   3
+     / \   \
+    4   5   6
+
+1. DFS
+
+The code I gave was:
+def dfs(node):
+    if not node:
+        return
+
+    dfs(node.left)
+    dfs(node.right)
+
+The important thing
+
+DFS is essentially:
+
+1. Go into the node
+2. Explore left
+3. Explore right
+
+For our tree, it visits:
+
+1 → 2 → 4 → 5 → 3 → 6
 """
