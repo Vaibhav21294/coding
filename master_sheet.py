@@ -4,8 +4,9 @@ Points
 1. Create
 2. Add, Remove
 3. Iterate, Access
-
 '''
+
+######################################################################################
 
 '''
 Arrays, Strings, Hashsets, Hashmaps
@@ -20,6 +21,8 @@ Arrays, Strings, Hashsets, Hashmaps
 | **Length**       | `len(nums)`      | `len(s)`      | `len(s)`      | `len(d)`                |
 '''
 
+######################################################################################
+
 '''
 Queue vs Stack
 Queue vs Stack
@@ -33,6 +36,8 @@ Queue vs Stack
 | **Check empty** | `if not q:`     | `if not stack:`   |
 | **Length**      | `len(q)`        | `len(stack)`      |
 '''
+
+######################################################################################
 
 '''
 Linkedlist
@@ -63,7 +68,10 @@ node.next         # get next node
 node = node.next  # move forward
 '''
 
+######################################################################################
+
 """
+Binary tree
 A binary tree is a data structure where each node can have at most 2 children:
 
 a left child
@@ -125,6 +133,8 @@ Binary Tree:
       /    \
    left   rights
 """
+
+######################################################################################
 
 """
 DFS
