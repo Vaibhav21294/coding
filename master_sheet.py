@@ -253,6 +253,8 @@ Remember
 Sliding Window → Contiguous range → Expand right → Shrink left → usually O(n)
 """
 
+######################################################################################
+
 # 1. Arrays
 
 nums = [1, 2, 3, 4, 5]
