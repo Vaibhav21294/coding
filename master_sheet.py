@@ -191,6 +191,68 @@ DFS → Deep → Recursion/Stack
 
 ######################################################################################
 
+"""
+Two Pointers — Cheat Sheet
+
+| Item                 | Remember                                  |
+| -------------------- | ----------------------------------------- |
+| **Idea**             | Use **2 indices** to scan an array/string |
+| **Pointers**         | Usually `left`, `right`                   |
+| **Move**             | `left += 1` / `right -= 1`                |
+| **Common direction** | One from left, one from right             |
+| **Best for**         | Sorted arrays, pairs, palindromes         |
+| **Time**             | Usually `O(n)`                            |
+| **Space**            | Usually `O(1)`                            |
+
+Core template
+left = 0
+right = len(nums) - 1
+
+while left < right:
+    # process
+
+    if condition:
+        left += 1
+    else:
+        right -= 1
+
+Remember
+
+Two Pointers → left + right → move one/both pointers → usually O(n)
+"""
+
+######################################################################################
+
+"""
+Sliding Window — Cheat Sheet
+
+| Item             | Remember                              |
+| ---------------- | ------------------------------------- |
+| **Idea**         | Maintain a **window** `[left, right]` |
+| **Expand**       | `right += 1`                          |
+| **Shrink**       | `left += 1`                           |
+| **When shrink?** | When window violates the condition    |
+| **Best for**     | **Contiguous** subarrays / substrings |
+| **Time**         | Usually `O(n)`                        |
+| **Space**        | Usually `O(1)` or `O(k)`              |
+
+Core template
+left = 0
+
+for right in range(len(nums)):
+    # add nums[right]
+
+    while condition_is_invalid:
+        # remove nums[left]
+        left += 1
+
+    # update answer
+
+Remember
+
+Sliding Window → Contiguous range → Expand right → Shrink left → usually O(n)
+"""
+
 # 1. Arrays
 
 nums = [1, 2, 3, 4, 5]
