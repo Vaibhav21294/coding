@@ -255,6 +255,69 @@ Sliding Window → Contiguous range → Expand right → Shrink left → usually
 
 ######################################################################################
 
+"""
+Binary Search — Cheat Sheet
+| Item          | Remember                                      |
+| ------------- | --------------------------------------------- |
+| **Idea**      | Search a **sorted** array by eliminating half |
+| **Pointers**  | `left`, `right`                               |
+| **Middle**    | `mid = (left + right) // 2`                   |
+| **Too small** | `left = mid + 1`                              |
+| **Too large** | `right = mid - 1`                             |
+| **Time**      | `O(log n)`                                    |
+| **Space**     | `O(1)`                                        |
+
+Core template
+left = 0
+right = len(nums) - 1
+
+while left <= right:
+    mid = (left + right) // 2
+
+    if nums[mid] == target:
+        return mid
+    elif nums[mid] < target:
+        left = mid + 1
+    else:
+        right = mid - 1
+
+return -1
+
+Remember
+
+Binary Search → Sorted → Check middle → Eliminate half → O(log n)
+"""
+
+######################################################################################
+
+"""
+Intervals — Cheat Sheet
+
+| Item           | Remember                             |
+| -------------- | ------------------------------------ |
+| **Represent**  | `[start, end]`                       |
+| **Sort**       | `intervals.sort(key=lambda x: x[0])` |
+| **Overlap**    | `current_start <= previous_end`      |
+| **No overlap** | `current_start > previous_end`       |
+| **Merge**      | `end = max(end, current_end)`        |
+| **Greedy**     | Often sort by **end**                |
+| **Time**       | Usually `O(n log n)`                 |
+| **Space**      | Usually `O(n)` for result            |
+
+Core pattern
+
+intervals.sort(key=lambda x: x[0])
+
+for start, end in intervals:
+    # compare with previous interval
+
+Remember
+
+Intervals → Sort → Compare start/end → Merge or choose greedily
+"""
+
+######################################################################################
+
 # 1. Arrays
 
 nums = [1, 2, 3, 4, 5]
