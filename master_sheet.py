@@ -192,6 +192,37 @@ DFS → Deep → Recursion/Stack
 ######################################################################################
 
 """
+BFS — Simple Explanation
+
+BFS = Breadth First Search
+
+Visit nodes level by level.
+
+Example:
+        1
+       / \
+      2   3
+     / \   \
+    4   5   6
+
+BFS visits:
+
+1 → 2 → 3 → 4 → 5 → 6
+
+Think:
+
+Level 1 → 1
+Level 2 → 2, 3
+Level 3 → 4, 5, 6
+
+BFS uses a Queue because the first node added should be the first node processed.
+"""
+
+######################################################################################
+
+
+
+"""
 Two Pointers — Cheat Sheet
 
 | Item                 | Remember                                  |
