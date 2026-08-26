@@ -318,6 +318,30 @@ Intervals → Sort → Compare start/end → Merge or choose greedily
 
 ######################################################################################
 
+"""
+Greedy — Cheat Sheet
+
+| Item                 | Remember                                 |
+| -------------------- | ---------------------------------------- |
+| **Idea**             | Make the **best choice now**             |
+| **Goal**             | Local best → leads to global best        |
+| **Typical approach** | Sort / scan → make a choice → never undo |
+| **Backtracking?**    | ❌ No                                     |
+| **DP?**              | ❌ Usually no                             |
+| **Time**             | Often `O(n)` or `O(n log n)`             |
+
+Core pattern
+for x in items:
+    if best_choice_now:
+        # take it
+
+Remember
+
+Greedy → Best choice now → Don't reconsider → Usually simple one-pass logic
+"""
+
+######################################################################################
+
 # 1. Arrays
 
 nums = [1, 2, 3, 4, 5]
