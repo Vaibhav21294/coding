@@ -216,6 +216,37 @@ Level 2 → 2, 3
 Level 3 → 4, 5, 6
 
 BFS uses a Queue because the first node added should be the first node processed.
+
+BFS — Cheat Sheet
+| Item               | Remember                    |
+| ------------------ | --------------------------- |
+| **Meaning**        | Go **level by level**       |
+| **Data structure** | **Queue**                   |
+| **Python**         | `deque`                     |
+| **Add**            | `q.append(node)`            |
+| **Remove**         | `q.popleft()`               |
+| **Tree**           | No `visited` usually needed |
+| **Graph**          | Usually use `visited`       |
+| **Best for**       | Levels / shortest path      |
+| **Time**           | `O(V)`                      |
+
+Core Tree Template
+from collections import deque
+
+q = deque([root])
+
+while q:
+    node = q.popleft()
+
+    if node.left:
+        q.append(node.left)
+
+    if node.right:
+        q.append(node.right)
+
+Remember
+
+BFS → Level by level → Queue → deque → popleft()
 """
 
 ######################################################################################
@@ -735,4 +766,86 @@ DFS is essentially:
 For our tree, it visits:
 
 1 → 2 → 4 → 5 → 3 → 6
+"""
+
+######################################################################################
+
+"""
+BFS dry run
+from collections import deque
+
+q = deque([root])
+
+while q:
+    node = q.popleft()
+
+    if node.left:
+        q.append(node.left)
+
+    if node.right:
+        q.append(node.right)
+
+
+Step 1
+
+Start:
+
+Queue: [1]
+
+Take the first item:
+
+node = q.popleft()
+node = 1
+Queue: []
+
+Add 1's children:
+
+Queue: [2, 3]
+
+Step 2
+
+Take the first item:
+
+node = 2
+Queue: [3]
+
+Add 2's children:
+
+Queue: [3, 4, 5]
+
+Step 3
+
+Take the first item:
+
+node = 3
+Queue: [4, 5]
+
+3 has no children.
+
+Queue stays:
+
+[4, 5]
+
+Step 4
+
+Take 4:
+
+node = 4
+Queue: [5]
+
+No children.
+
+Step 5
+
+Take 5:
+
+node = 5
+Queue: []
+
+No children.
+
+Queue is empty → stop.
+
+Final BFS order
+1 → 2 → 3 → 4 → 5
 """
