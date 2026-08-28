@@ -251,6 +251,77 @@ BFS → Level by level → Queue → deque → popleft()
 
 ######################################################################################
 
+"""
+Heap — Simple Explanation
+
+A heap is a non-linear tree-based data structure that maintains a special ordering property: 
+in a Min Heap, the parent is ≤ its children; 
+in a Max Heap, the parent is ≥ its children.
+
+Example Min Heap:
+
+        2
+       / \
+      5   8
+     / \
+    10  7
+The smallest element is always at the root (2).
+
+Memorize
+
+Heap → Tree → Parent has priority over children → Min/Max at root → heapq in Python
+
+And one important clarification: a heap is conceptually a complete binary tree, not a general graph. 
+In Python, heapq stores that tree efficiently as a list.
+
+A heap is a data structure that lets you quickly get the smallest or largest element.
+
+For Python interviews, the most important thing to remember is:
+
+Python's heapq is a Min Heap by default.
+
+Example:
+
+import heapq
+
+heap = []
+
+heapq.heappush(heap, 5)
+heapq.heappush(heap, 2)
+heapq.heappush(heap, 8)
+
+heapq.heappop(heap)   # 2
+
+You don't need to keep the entire list sorted. 
+The heap only guarantees that the smallest element is at the top.
+
+Heap — Cheat Sheet
+| Operation      | Python                     |
+| -------------- | -------------------------- |
+| **Create**     | `heap = []`                |
+| **Add**        | `heapq.heappush(heap, x)`  |
+| **Remove min** | `heapq.heappop(heap)`      |
+| **Peek min**   | `heap[0]`                  |
+| **Size**       | `len(heap)`                |
+| **Build heap** | `heapq.heapify(nums)`      |
+| **Min Heap**   | Default `heapq`            |
+| **Max Heap**   | `heapq.heappush(heap, -x)` |
+
+Complexity
+| Operation  |       Time |
+| ---------- | ---------: |
+| `heappush` | `O(log n)` |
+| `heappop`  | `O(log n)` |
+| `heap[0]`  |     `O(1)` |
+| `heapify`  |     `O(n)` |
+
+Remember
+
+Heap → quickly get min/max → heapq → Min Heap by default
+
+"""
+
+######################################################################################
 
 
 """
@@ -402,6 +473,10 @@ Remember
 Greedy → Best choice now → Don't reconsider → Usually simple one-pass logic
 """
 
+######################################################################################
+######################################################################################
+######################################################################################
+######################################################################################
 ######################################################################################
 
 # 1. Arrays
@@ -848,6 +923,41 @@ Queue is empty → stop.
 
 Final BFS order
 1 → 2 → 3 → 4 → 5
+"""
+
+######################################################################################
+
+"""
+Example: Max Heap
+
+Python doesn't directly provide a max heap, so use negative values:
+
+heap = []
+
+heapq.heappush(heap, -5)
+heapq.heappush(heap, -2)
+heapq.heappush(heap, -8)
+
+-heapq.heappop(heap)    # 8
+
+So:
+
+Min Heap → normal values
+Max Heap → negative values
+
+One more important interview pattern
+
+For Top K Frequent Elements, you may see tuples:
+
+heapq.heappush(heap, (frequency, num))
+
+Python compares the first element of the tuple first:
+
+(frequency, num)
+     ↑
+   priority
+
+So the heap will remove the tuple with the smallest frequency first.
 """
 
 ######################################################################################
