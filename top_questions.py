@@ -141,6 +141,46 @@ Recursions
 │ fibonacci_number.py
 │ pow_x_n.py
 
+For your interview prep, I would keep this tight. You don't need 20 DFS/BFS problems.
+Must-do DFS problems
+| # | LeetCode Problem                 | Main concept                 |
+| - | -------------------------------- | ---------------------------- |
+| 1 | **Maximum Depth of Binary Tree** | Basic tree DFS               |
+| 2 | **Same Tree**                    | Recursive DFS                |
+| 3 | **Invert Binary Tree**           | Modify tree with DFS         |
+| 4 | **Balanced Binary Tree**         | DFS + return information     |
+| 5 | **Diameter of Binary Tree**      | DFS + global/nonlocal result |
+| 6 | **Validate Binary Search Tree**  | DFS + constraints            |
+| 7 | **Number of Islands**            | DFS on a grid                |
+| 8 | **Clone Graph**                  | DFS + `visited`              |
+
+Must-do BFS problems
+| # | LeetCode Problem                      | Main concept           |
+| - | ------------------------------------- | ---------------------- |
+| 1 | **Binary Tree Level Order Traversal** | Basic BFS              |
+| 2 | **Binary Tree Right Side View**       | BFS by level           |
+| 3 | **Number of Islands**                 | BFS on a grid          |
+| 4 | **Rotting Oranges**                   | Multi-source BFS       |
+| 5 | **Word Ladder**                       | BFS + shortest path    |
+| 6 | **Course Schedule**                   | BFS / topological sort |
+
+If you are short on time
+
+I'd prioritize these 10:
+
+| #  | Problem                               | Technique | Structure        |
+| -- | ------------------------------------- | --------- | ---------------- |
+| 1  | **Maximum Depth of Binary Tree**      | DFS       | 🌳 Tree          |
+| 2  | **Balanced Binary Tree**              | DFS       | 🌳 Tree          |
+| 3  | **Diameter of Binary Tree**           | DFS       | 🌳 Tree          |
+| 4  | **Validate Binary Search Tree**       | DFS       | 🌳 Tree          |
+| 5  | **Number of Islands**                 | DFS       | 🕸️ Graph / Grid |
+| 6  | **Binary Tree Level Order Traversal** | BFS       | 🌳 Tree          |
+| 7  | **Binary Tree Right Side View**       | BFS       | 🌳 Tree          |
+| 8  | **Rotting Oranges**                   | BFS       | 🕸️ Graph / Grid |
+| 9  | **Course Schedule**                   | BFS       | 🕸️ Graph        |
+| 10 | **Word Ladder**                       | BFS       | 🕸️ Graph        |
+
 Suggested Learning Order
 
 Since you've already studied the underlying concepts, I'd recommend this progression:
