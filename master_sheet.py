@@ -9,6 +9,9 @@ Points
 ######################################################################################
 
 '''
+
+1.1
+
 Arrays, Strings, Hashsets, Hashmaps
 | Operation        | Array / List     | String        | HashSet       | HashMap                 |
 | ---------------- | ---------------- | ------------- | ------------- | ----------------------- |
@@ -24,7 +27,9 @@ Arrays, Strings, Hashsets, Hashmaps
 ######################################################################################
 
 '''
-Queue vs Stack
+
+1.1
+
 Queue vs Stack
 | Operation       | Queue (`deque`) | Stack (`list`)    |
 | --------------- | --------------- | ----------------- |
@@ -40,6 +45,10 @@ Queue vs Stack
 ######################################################################################
 
 '''
+
+1.1
+
+
 Linkedlist
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -71,6 +80,9 @@ node = node.next  # move forward
 ######################################################################################
 
 """
+
+1.2.1
+
 Binary tree
 A binary tree is a data structure where each node can have at most 2 children:
 
@@ -137,6 +149,9 @@ Binary Tree:
 ######################################################################################
 
 """
+
+3.1
+
 DFS
         1
        / \
@@ -192,6 +207,9 @@ DFS → Deep → Recursion/Stack
 ######################################################################################
 
 """
+
+3.2
+
 BFS — Simple Explanation
 
 BFS = Breadth First Search
@@ -252,6 +270,9 @@ BFS → Level by level → Queue → deque → popleft()
 ######################################################################################
 
 """
+
+1.2.3
+
 Heap — Simple Explanation
 
 A heap is a non-linear tree-based data structure that maintains a special ordering property: 
@@ -325,6 +346,9 @@ Heap → quickly get min/max → heapq → Min Heap by default
 
 
 """
+
+2.1
+
 Two Pointers — Cheat Sheet
 
 | Item                 | Remember                                  |
@@ -357,6 +381,9 @@ Two Pointers → left + right → move one/both pointers → usually O(n)
 ######################################################################################
 
 """
+
+2.2
+
 Sliding Window — Cheat Sheet
 
 | Item             | Remember                              |
@@ -389,6 +416,9 @@ Sliding Window → Contiguous range → Expand right → Shrink left → usually
 ######################################################################################
 
 """
+
+2.3
+
 Binary Search — Cheat Sheet
 | Item          | Remember                                      |
 | ------------- | --------------------------------------------- |
@@ -424,6 +454,9 @@ Binary Search → Sorted → Check middle → Eliminate half → O(log n)
 ######################################################################################
 
 """
+
+2.4
+
 Intervals — Cheat Sheet
 
 | Item           | Remember                             |
@@ -452,6 +485,9 @@ Intervals → Sort → Compare start/end → Merge or choose greedily
 ######################################################################################
 
 """
+
+2.5
+
 Greedy — Cheat Sheet
 
 | Item                 | Remember                                 |
@@ -476,6 +512,8 @@ Greedy → Best choice now → Don't reconsider → Usually simple one-pass logi
 ######################################################################################
 
 """
+
+3
 
 Traversal techniques:
 
