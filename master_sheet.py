@@ -270,6 +270,9 @@ BFS → Level by level → Queue → deque → popleft()
 ######################################################################################
 
 """
+
+1.2.2
+
 Graph — Cheat Sheet
 
 A graph is a non-linear data structure made of nodes (vertices) connected by edges.
