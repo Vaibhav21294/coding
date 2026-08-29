@@ -270,6 +270,46 @@ BFS → Level by level → Queue → deque → popleft()
 ######################################################################################
 
 """
+Graph — Cheat Sheet
+
+A graph is a non-linear data structure made of nodes (vertices) connected by edges.
+
+Core representation
+| Item                  | Remember                       |
+| --------------------- | ------------------------------ |
+| **Create**            | `graph = {}`                   |
+| **Adjacency list**    | `graph[node] = [neighbors]`    |
+| **Access neighbors**  | `graph[node]`                  |
+| **Add edge**          | `graph[a].append(b)`           |
+| **Iterate neighbors** | `for neighbor in graph[node]:` |
+| **Avoid revisiting**  | `visited = set()`              |
+| **Traversal**         | DFS / BFS                      |
+
+Core template
+visited = set()
+
+def dfs(node):
+    if node in visited:
+        return
+
+    visited.add(node)
+
+    for neighbor in graph[node]:
+        dfs(neighbor)
+
+Remember
+
+Graph → Nodes + Edges → Adjacency List → visited → DFS/BFS
+
+And the key difference from a tree:
+
+Tree  → no cycles (normally) → visited often not needed
+Graph → can have cycles       → visited usually needed
+"""
+
+######################################################################################
+
+"""
 
 1.2.3
 
@@ -1019,3 +1059,121 @@ So the heap will remove the tuple with the smallest frequency first.
 """
 
 ######################################################################################
+
+"""
+Graph
+
+Suppose the graph is:
+
+1 ─── 2
+│     │
+└──── 3
+
+And:
+
+graph = {
+    1: [2, 3],
+    2: [1, 3],
+    3: [1, 2]
+}
+
+1. Start DFS
+dfs(1)
+
+We're saying:
+
+Start exploring from node 1.
+
+2. Check if already visited
+if node in visited:
+    return
+
+Initially:
+
+visited = {}
+
+Node 1 isn't there, so continue.
+
+3. Mark node as visited
+visited.add(node)
+
+Now:
+
+visited = {1}
+
+This is important because graphs can have cycles.
+
+4. Get neighbors
+for neighbor in graph[node]:
+
+For node 1:
+
+graph[1] = [2, 3]
+
+So we first get:
+
+neighbor = 2
+
+and call:
+
+dfs(2)
+
+5. DFS goes deeper
+
+At node 2:
+
+visited = {1, 2}
+
+Its neighbors are:
+
+[1, 3]
+
+First neighbor is 1.
+
+dfs(1)
+
+But 1 is already visited:
+
+if 1 in visited:
+    return
+
+So we don't keep going around the cycle.
+
+Then we explore 3.
+
+visited = {1, 2, 3}
+
+Eventually all nodes are visited.
+
+So what is the template doing?
+
+It is essentially:
+
+Start at a node
+     ↓
+Have I seen it before?
+     ↓
+   Yes → stop
+     ↓ No
+Mark it as visited
+     ↓
+Look at every neighbor
+     ↓
+DFS into each neighbor
+
+The three most important lines
+if node in visited:
+    return
+
+visited.add(node)
+
+for neighbor in graph[node]:
+    dfs(neighbor)
+
+Think:
+
+Check → Mark → Explore neighbors
+
+That's the core of DFS on a graph.
+
+"""
