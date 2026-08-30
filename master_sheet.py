@@ -556,6 +556,48 @@ BFS → Level by level → Queue → deque → popleft()
 """
 
 ######################################################################################
+
+"""
+
+4.1
+
+Recursion — Cheat Sheet
+
+| Item               | Remember                               |
+| ------------------ | -------------------------------------- |
+| **Idea**           | Function **calls itself**              |
+| **Base case**      | `if condition: return`                 |
+| **Recursive case** | `function(smaller_problem)`            |
+| **Must have**      | Base case + progress toward it         |
+| **Uses**           | Call stack                             |
+| **Space**          | Usually `O(n)` for `n` recursive calls |
+
+Core template
+
+def recursion(n):
+    if base_case:
+        return
+
+    recursion(smaller_problem)
+
+Remember
+
+Recursion → Function calls itself → Base case stops it → Smaller problem → Call stack
+
+"""
+
+######################################################################################
+
+"""
+
+4.2
+
+Backtracking — Cheat Sheet
+
+"""
+
+
+######################################################################################
 ######################################################################################
 ######################################################################################
 ######################################################################################
