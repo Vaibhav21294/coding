@@ -143,6 +143,7 @@ Binary Tree:
        node
       /    \
    left   rights
+
 """
 
 ######################################################################################
@@ -297,6 +298,7 @@ while left < right:
 Remember
 
 Two Pointers → left + right → move one/both pointers → usually O(n)
+
 """
 
 ######################################################################################
@@ -428,28 +430,7 @@ for x in items:
 Remember
 
 Greedy → Best choice now → Don't reconsider → Usually simple one-pass logic
-"""
 
-######################################################################################
-
-"""
-
-3
-
-Traversal techniques:
-
-| #  | Problem                               | Technique | Structure        |
-| -- | ------------------------------------- | --------- | ---------------- |
-| 1  | **Maximum Depth of Binary Tree**      | DFS       | 🌳 Tree          |
-| 2  | **Balanced Binary Tree**              | DFS       | 🌳 Tree          |
-| 3  | **Diameter of Binary Tree**           | DFS       | 🌳 Tree          |
-| 4  | **Validate Binary Search Tree**       | DFS       | 🌳 Tree          |
-| 5  | **Number of Islands**                 | DFS       | 🕸️ Graph / Grid |
-| 6  | **Binary Tree Level Order Traversal** | BFS       | 🌳 Tree          |
-| 7  | **Binary Tree Right Side View**       | BFS       | 🌳 Tree          |
-| 8  | **Rotting Oranges**                   | BFS       | 🕸️ Graph / Grid |
-| 9  | **Course Schedule**                   | BFS       | 🕸️ Graph        |
-| 10 | **Word Ladder**                       | BFS       | 🕸️ Graph        |
 """
 
 ######################################################################################
@@ -571,9 +552,8 @@ while q:
 Remember
 
 BFS → Level by level → Queue → deque → popleft()
-"""
 
-######################################################################################
+"""
 
 ######################################################################################
 ######################################################################################
