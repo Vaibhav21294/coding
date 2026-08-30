@@ -10,7 +10,7 @@ Points
 
 '''
 
-1.1
+1.1.1 - 1.1.4
 
 Arrays, Strings, Hashsets, Hashmaps
 | Operation        | Array / List     | String        | HashSet       | HashMap                 |
@@ -28,7 +28,7 @@ Arrays, Strings, Hashsets, Hashmaps
 
 '''
 
-1.1
+1.1.5 - 1.1.6
 
 Queue vs Stack
 | Operation       | Queue (`deque`) | Stack (`list`)    |
@@ -46,8 +46,7 @@ Queue vs Stack
 
 '''
 
-1.1
-
+1.1.7
 
 Linkedlist
 class ListNode:
@@ -150,127 +149,6 @@ Binary Tree:
 
 """
 
-3.1
-
-DFS
-        1
-       / \
-      2   3
-     / \   \
-    4   5   6
-
-1. DFS
-
-The code I gave was:
-def dfs(node):
-    if not node:
-        return
-
-    dfs(node.left)
-    dfs(node.right)
-
-The important thing
-
-DFS is essentially:
-
-1. Go into the node
-2. Explore left
-3. Explore right
-
-For our tree, it visits:
-
-1 → 2 → 4 → 5 → 3 → 6
-
-DFS — Cheat Sheet
-| Item               | Remember                             |
-| ------------------ | ------------------------------------ |
-| **Meaning**        | Go **deep first**                    |
-| **Tree**           | `dfs(node.left)` → `dfs(node.right)` |
-| **Implementation** | **Recursion / Stack**                |
-| **Base case**      | `if not node: return`                |
-| **Graph**          | Use `visited` set                    |
-
-Core template
-def dfs(node):
-    if not node:
-        return
-
-    # process node
-
-    dfs(node.left)
-    dfs(node.right)
-
-Memory:
-DFS → Deep → Recursion/Stack
-"""
-
-######################################################################################
-
-"""
-
-3.2
-
-BFS — Simple Explanation
-
-BFS = Breadth First Search
-
-Visit nodes level by level.
-
-Example:
-        1
-       / \
-      2   3
-     / \   \
-    4   5   6
-
-BFS visits:
-
-1 → 2 → 3 → 4 → 5 → 6
-
-Think:
-
-Level 1 → 1
-Level 2 → 2, 3
-Level 3 → 4, 5, 6
-
-BFS uses a Queue because the first node added should be the first node processed.
-
-BFS — Cheat Sheet
-| Item               | Remember                    |
-| ------------------ | --------------------------- |
-| **Meaning**        | Go **level by level**       |
-| **Data structure** | **Queue**                   |
-| **Python**         | `deque`                     |
-| **Add**            | `q.append(node)`            |
-| **Remove**         | `q.popleft()`               |
-| **Tree**           | No `visited` usually needed |
-| **Graph**          | Usually use `visited`       |
-| **Best for**       | Levels / shortest path      |
-| **Time**           | `O(V)`                      |
-
-Core Tree Template
-from collections import deque
-
-q = deque([root])
-
-while q:
-    node = q.popleft()
-
-    if node.left:
-        q.append(node.left)
-
-    if node.right:
-        q.append(node.right)
-
-Remember
-
-BFS → Level by level → Queue → deque → popleft()
-"""
-
-######################################################################################
-
-"""
-
 1.2.2
 
 Graph — Cheat Sheet
@@ -308,6 +186,7 @@ And the key difference from a tree:
 
 Tree  → no cycles (normally) → visited often not needed
 Graph → can have cycles       → visited usually needed
+
 """
 
 ######################################################################################
@@ -386,7 +265,6 @@ Heap → quickly get min/max → heapq → Min Heap by default
 """
 
 ######################################################################################
-
 
 """
 
@@ -573,6 +451,129 @@ Traversal techniques:
 | 9  | **Course Schedule**                   | BFS       | 🕸️ Graph        |
 | 10 | **Word Ladder**                       | BFS       | 🕸️ Graph        |
 """
+
+######################################################################################
+
+"""
+
+3.1
+
+DFS
+        1
+       / \
+      2   3
+     / \   \
+    4   5   6
+
+1. DFS
+
+The code I gave was:
+def dfs(node):
+    if not node:
+        return
+
+    dfs(node.left)
+    dfs(node.right)
+
+The important thing
+
+DFS is essentially:
+
+1. Go into the node
+2. Explore left
+3. Explore right
+
+For our tree, it visits:
+
+1 → 2 → 4 → 5 → 3 → 6
+
+DFS — Cheat Sheet
+| Item               | Remember                             |
+| ------------------ | ------------------------------------ |
+| **Meaning**        | Go **deep first**                    |
+| **Tree**           | `dfs(node.left)` → `dfs(node.right)` |
+| **Implementation** | **Recursion / Stack**                |
+| **Base case**      | `if not node: return`                |
+| **Graph**          | Use `visited` set                    |
+
+Core template
+def dfs(node):
+    if not node:
+        return
+
+    # process node
+
+    dfs(node.left)
+    dfs(node.right)
+
+Memory:
+DFS → Deep → Recursion/Stack
+"""
+
+######################################################################################
+
+"""
+
+3.2
+
+BFS — Simple Explanation
+
+BFS = Breadth First Search
+
+Visit nodes level by level.
+
+Example:
+        1
+       / \
+      2   3
+     / \   \
+    4   5   6
+
+BFS visits:
+
+1 → 2 → 3 → 4 → 5 → 6
+
+Think:
+
+Level 1 → 1
+Level 2 → 2, 3
+Level 3 → 4, 5, 6
+
+BFS uses a Queue because the first node added should be the first node processed.
+
+BFS — Cheat Sheet
+| Item               | Remember                    |
+| ------------------ | --------------------------- |
+| **Meaning**        | Go **level by level**       |
+| **Data structure** | **Queue**                   |
+| **Python**         | `deque`                     |
+| **Add**            | `q.append(node)`            |
+| **Remove**         | `q.popleft()`               |
+| **Tree**           | No `visited` usually needed |
+| **Graph**          | Usually use `visited`       |
+| **Best for**       | Levels / shortest path      |
+| **Time**           | `O(V)`                      |
+
+Core Tree Template
+from collections import deque
+
+q = deque([root])
+
+while q:
+    node = q.popleft()
+
+    if node.left:
+        q.append(node.left)
+
+    if node.right:
+        q.append(node.right)
+
+Remember
+
+BFS → Level by level → Queue → deque → popleft()
+"""
+
+######################################################################################
 
 ######################################################################################
 ######################################################################################
