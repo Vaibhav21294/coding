@@ -594,6 +594,37 @@ Recursion → Function calls itself → Base case stops it → Smaller problem �
 
 Backtracking — Cheat Sheet
 
+Concept: Backtracking = try a choice → explore it → undo it → try the next choice.
+
+Core template: append(choice) → backtrack() → pop() — choose → explore → undo.
+
+Backtracking — Cheat Sheet
+| Item         | Remember                            |
+| ------------ | ----------------------------------- |
+| **Idea**     | Try all possible choices            |
+| **Core**     | Recursion + **Undo**                |
+| **Choose**   | `path.append(choice)`               |
+| **Explore**  | `backtrack()`                       |
+| **Undo**     | `path.pop()`                        |
+| **Used for** | Subsets, permutations, combinations |
+| **Time**     | Usually exponential                 |
+| **Space**    | Usually `O(n)` recursion depth      |
+
+Core template
+def backtrack(path):
+    if done:
+        result.append(path.copy())
+        return
+
+    for choice in choices:
+        path.append(choice)
+        backtrack(path)
+        path.pop()
+
+Remember
+
+Backtracking → Choose → Explore → Undo
+
 """
 
 
