@@ -627,6 +627,33 @@ Backtracking → Choose → Explore → Undo
 
 """
 
+######################################################################################
+
+"""
+
+Dynamic Programming — Cheat Sheet
+
+Concept: DP = solve smaller subproblems once, store their answers, and reuse them.
+
+Core template: if already solved → return it; otherwise solve smaller problems → store result → return.
+
+| Item              | Remember                                       |
+| ----------------- | ---------------------------------------------- |
+| **Identify**      | Overlapping subproblems                        |
+| **Store**         | `dp[i]` = answer for subproblem `i`            |
+| **Base case**     | Initialize smallest problems                   |
+| **Transition**    | Build current answer from previous answers     |
+| **Common forms**  | Top-down (memoization), Bottom-up (tabulation) |
+| **Typical space** | `O(n)`                                         |
+
+Remember
+
+DP → Subproblem → Store → Reuse → Avoid repeated work
+
+"""
+
+######################################################################################
+
 
 ######################################################################################
 ######################################################################################
