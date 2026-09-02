@@ -631,6 +631,8 @@ Backtracking → Choose → Explore → Undo
 
 """
 
+5
+
 Dynamic Programming — Cheat Sheet
 
 Concept: DP = solve smaller subproblems once, store their answers, and reuse them.
