@@ -11,7 +11,7 @@ I recommend doing them in this order.
 These build the foundation.
 | Problem                         | Difficulty | Pattern            |
 | ------------------------------- | ---------- | ------------------ |
-| Two Sum                         | Easy       | Hash Map           |
+| Two Sum                         | Easy       | Hash Map           | *2
 | Best Time to Buy and Sell Stock | Easy       | Arrays             |
 | Product of Array Except Self    | Medium     | Prefix/Suffix      |
 | Maximum Subarray                | Medium     | Kadane's Algorithm |

@@ -156,3 +156,23 @@ Since hash map lookups are O(1) on average, the entire algorithm runs in O(n) ti
 
 This explanation demonstrates both your understanding of the algorithm and your ability to discuss its complexity clearly.
 """
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hashmap = {}
+
+        for i in range(len(nums)):
+            diff = target - nums[i]
+
+            if diff in hashmap:
+                return [hashmap[diff], i]
+
+            if nums[i] not in hashmap:
+                hashmap[nums[i]] = i
+        
+"""
+Time: O(N)
+We scan the array once. HashMap lookup (diff in hashmap) is O(1) average.
+
+Space: O(N), because the HashMap can store up to N elements.
+"""
