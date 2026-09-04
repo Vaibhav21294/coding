@@ -308,4 +308,28 @@ Suffix (right-to-left)
 This same pattern appears in several other interview problems, making it an important one to recognize.
 """
 
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        prearray = [1] * len(nums)
+        postarray = [1] * len(nums)
+        answer = [1] * len(nums)
 
+        for i in range(1, len(nums)):
+            prearray[i] = prearray[i-1] * nums[i-1]
+        
+        for i in range(len(nums)-2, -1, -1):
+            postarray[i] = postarray[i+1] * nums[i+1]
+
+        for i in range(len(nums)):
+            answer[i] = prearray[i] * postarray[i]
+        
+        return answer
+
+"""
+Complexity
+Time: O(N) ✅
+You make 3 passes through the array. O(N) + O(N) + O(N) = O(N).
+Space: O(N) ✅
+You create prearray, postarray, and answer, each of size N.
+So total auxiliary space is O(N).
+"""
