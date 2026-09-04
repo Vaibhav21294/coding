@@ -12,7 +12,7 @@ These build the foundation.
 | Problem                         | Difficulty | Pattern            |
 | ------------------------------- | ---------- | ------------------ |
 | Two Sum                         | Easy       | Hash Map           | *2
-| Best Time to Buy and Sell Stock | Easy       | Arrays             |
+| Best Time to Buy and Sell Stock | Easy       | Arrays             | *2
 | Product of Array Except Self    | Medium     | Prefix/Suffix      |
 | Maximum Subarray                | Medium     | Kadane's Algorithm |
 | Merge Sorted Array              | Easy       | Arrays             |

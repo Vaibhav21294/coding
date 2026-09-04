@@ -131,3 +131,23 @@ Whenever you're asked to maximize or minimize something while scanning an array,
 
 You'll see this pattern again in many interview problems.
 """
+
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        lowest = prices[0]
+        max_profit = 0
+
+        for i in range(1, len(prices)):
+            profit = prices[i] - lowest
+
+            max_profit = max(max_profit, profit)
+            lowest = min(lowest, prices[i])
+
+        return max_profit
+
+"""
+Complexity
+Time: O(N) ✅ — one pass through the prices.
+Space: O(1) ✅ — only two variables: lowest and max_profit.
+
+"""
