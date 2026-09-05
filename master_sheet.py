@@ -24,6 +24,14 @@ Arrays, Strings, Hashsets, Hashmaps
 | **Length**       | `len(nums)`      | `len(s)`      | `len(s)`      | `len(d)`                |
 '''
 
+"""
+
+1. maximum subarray - Kadane's Algorithm
+At each number: either extend the current subarray or start a new one.
+current_sum = max(current_sum + nums[i], nums[i])
+largest = max(largest, current_sum)
+"""
+
 ######################################################################################
 
 '''

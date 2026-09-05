@@ -174,3 +174,23 @@ Think:
 
 That question leads directly to Kadane's algorithm, which is the standard optimal solution for this problem.
 """
+
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        current_sum = nums[0]
+        largest = nums[0]
+
+        for i in range(1, len(nums)):
+            current_sum = max(current_sum + nums[i], nums[i])
+
+            largest = max(largest, current_sum)
+        
+        return largest
+
+"""
+
+Complexity
+Time: O(N) ✅ — one pass through the array.
+Space: O(1) ✅ — only current_sum and largest are used; no extra array/hashmap.
+
+"""
