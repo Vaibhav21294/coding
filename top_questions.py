@@ -13,8 +13,8 @@ These build the foundation.
 | ------------------------------- | ---------- | ------------------ |
 | Two Sum                         | Easy       | Hash Map           | *2
 | Best Time to Buy and Sell Stock | Easy       | Arrays             | *2
-| Product of Array Except Self    | Medium     | Prefix/Suffix      |
-| Maximum Subarray                | Medium     | Kadane's Algorithm |
+| Product of Array Except Self    | Medium     | Prefix/Suffix      | *2
+| Maximum Subarray                | Medium     | Kadane's Algorithm | *2
 | Merge Sorted Array              | Easy       | Arrays             |
 | Rotate Array                    | Medium     | Arrays             |
 | Valid Anagram                   | Easy       | Strings            |
