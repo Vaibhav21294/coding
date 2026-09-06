@@ -62,3 +62,35 @@ Complexity
 Time: O(m + n)
 Space: O(1) (in-place)
 """
+
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        p1 = len(nums1)-1
+
+        while m > 0 and n > 0:
+            if nums1[m-1] < nums2[n-1]:
+                nums1[p1] = nums2[n-1]
+                n -= 1
+            else:
+                nums1[p1] = nums1[m-1]
+                m -= 1
+            p1 -= 1
+        
+        if n > 0:
+            for i in range(n-1, -1, -1):
+                nums1[i] = nums2[i]
+
+"""
+Complexity
+
+Time: O(m+n) ✅
+You potentially process every element from both arrays.
+
+Space: O(1) ✅
+No extra array is created; you modify nums1 in-place.
+"""
+
+
