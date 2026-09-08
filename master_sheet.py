@@ -33,6 +33,13 @@ largest = max(largest, current_sum)
 
 2. rotate array
 Reverse the entire array, Reverse the first k elements, Reverse the remaining elements
+
+def reverse(l, r):
+    while l <= r:
+        nums[l], nums[r] = nums[r], nums[l]
+        l += 1
+        r -= 1
+    return nums
 """
 
 ######################################################################################
