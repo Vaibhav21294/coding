@@ -150,7 +150,6 @@ class Solution:
         if k == 0:
             return nums
         
-
         def reverse(l, r):
             while l <= r:
                 nums[l], nums[r] = nums[r], nums[l]
