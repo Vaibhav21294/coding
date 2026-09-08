@@ -16,7 +16,7 @@ These build the foundation.
 | Product of Array Except Self    | Medium     | Prefix/Suffix      | *2
 | Maximum Subarray                | Medium     | Kadane's Algorithm | *2
 | Merge Sorted Array              | Easy       | Arrays             | *2
-| Rotate Array                    | Medium     | Arrays             |
+| Rotate Array                    | Medium     | Arrays             | *2
 | Valid Anagram                   | Easy       | Strings            |
 | Group Anagrams                  | Medium     | Hashing            |
 | Longest Consecutive Sequence    | Medium     | Hash Set           |

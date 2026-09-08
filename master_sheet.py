@@ -30,6 +30,9 @@ Arrays, Strings, Hashsets, Hashmaps
 At each number: either extend the current subarray or start a new one.
 current_sum = max(current_sum + nums[i], nums[i])
 largest = max(largest, current_sum)
+
+2. rotate array
+Reverse the entire array, Reverse the first k elements, Reverse the remaining elements
 """
 
 ######################################################################################

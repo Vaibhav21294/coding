@@ -140,3 +140,34 @@ Time: O(n)
 Space: O(1)
 """
 
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+
+        k = k % len(nums)
+        if k == 0:
+            return nums
+        
+
+        def reverse(l, r):
+            while l <= r:
+                nums[l], nums[r] = nums[r], nums[l]
+                l += 1
+                r -= 1
+            return nums       
+
+        l = 0
+        r = len(nums)-1
+        reverse(l, r)
+        reverse(l, k-1)
+        reverse(k, r)
+
+"""
+Complexity
+Time: O(N) ✅
+You reverse the array 3 times. Each reversal is O(N), so O(N) + O(N) + O(N) = O(N).
+Space: O(1) ✅
+You modify nums in-place and only use a few variables.
+"""
